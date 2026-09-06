@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Varela+Round&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    min-height: 100vh;
+}
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    min-height: 65px;
+    padding: 0 20px;
+    background-color: #000;
+    color: white;
+}
+
+nav ul li {
+    padding: 10px 12px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: all 0.25s ease;
+}
+
+nav ul li:hover {
+    color: #1db954;
+    transform: scale(1.08);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-right: 10px;
+}
+
+.brand img {
+    width: 42px;
+}
+
+.navRight {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.searchBox {
+    width: 300px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    background-color: #242424;
+    border-radius: 25px;
+    transition: all 0.25s ease;
+}
+
+.searchBox i {
+    color: #b3b3b3;
+    margin-right: 10px;
+}
+
+.searchBox input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 14px;
+}
+
+.searchBox input::placeholder {
+    color: #b3b3b3;
+}
+
+.searchBox:hover {
+    background-color: #333;
+    transform: scale(1.02);
+}
+
+.searchBox:focus-within {
+    box-shadow: 0 0 0 2px white;
+}
+
+.library {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.library i {
+    font-size: 18px;
+}
+
+.library:hover {
+    color: #1db954;
+    background-color: #222;
+    transform: scale(1.05);
+}
+
+.profileIcon {
+    color: white;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.profileIcon:hover {
+    color: #1db954;
+    transform: scale(1.15);
+}
+
+.container {
+    width: 80vw;
+    min-height: 70vh;
+    margin: 25px auto;
+    padding: 40px;
+    display: flex;
+    color: white;
+    border-radius: 15px;
+    background-color: #000;
+    background-image: url('bg1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.songList {
+    width: 60%;
+}
+
+.songList h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.songItemContainer {
+    margin-top: 30px;
+}
+
+.songItem {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 14px 0;
+    padding: 0 15px;
+    background-color: white;
+    color: black;
+    border-radius: 35px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.songItem:hover {
+    background-color: #1db954;
+    color: white;
+    transform: scale(1.02);
+}
+
+.songItem img {
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 18px;
+    transition: transform 0.2s ease;
+}
+
+.songItem:hover img {
+    transform: scale(1.08);
+}
+
+.songName {
+    flex: 1;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.timestamp {
+    display: flex;
+    align-items: center;
+}
+
+.songItemPlay {
+    font-size: 22px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.songItemPlay:hover {
+    transform: scale(1.2);
+}
+
+.songListPlay{
+    display: flex;
+    align-items: center;
+}
+
+.timestamp{
+    display:flex;
+    align-items: center;
+    gap: 12px;
+    margin-right: 10px;
+    font-size: 14px;
+}
+
+.songBanner {
+    flex: 1;
+    min-height: 400px;
+}
+
+.bottom {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    background-color: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 1000;
+    border-top: 1px solid #282828;
+}
+
+.progressContainer {
+    position: absolute;
+    top: 5px;
+    left: 10%;
+    width: 80%;
+}
+
+#myProgressBar {
+    width: 100%;
+    height: 4px;
+    cursor: pointer;
+    accent-color: #1db954;
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 8px;
+}
+
+.icons i {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.icons i:hover {
+    color: #1db954;
+    transform: scale(1.1);
+}
+
+#masterPlay {
+    font-size: 28px;
+}
+
+.songInfo {
+    position: absolute;
+    left: 30px;
+    bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.songInfo img {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+#masterSongName {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+@media (max-width: 900px) {
+
+    nav ul li:not(.brand) {
+        display: none;
+    }
+
+    .navRight {
+        gap: 10px;
+    }
+
+    .searchBox {
+        width: 200px;
+    }
+
+    .library span {
+        display: none;
+    }
+
+    .container {
+        width: 92vw;
+        padding: 25px;
+        min-height: 70vh;
+    }
+
+    .songList {
+        width: 100%;
+    }
+
+    .songBanner {
+        display: none;
+    }
+
+    .songList h1 {
+        font-size: 22px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    nav ul {
+        padding: 0 10px;
+    }
+
+    .searchBox {
+        width: 150px;
+    }
+
+    .profileIcon {
+        font-size: 18px;
+    }
+
+    .container {
+        margin-bottom: 120px;
+        padding: 20px 15px;
+    }
+
+    .songItem {
+        height: 55px;
+        padding: 0 10px;
+    }
+
+    .songItem img {
+        width: 40px;
+        height: 40px;
+        margin-right: 12px;
+    }
+
+    .songName {
+        font-size: 13px;
+    }
+
+    .bottom {
+        height: 95px;
+    }
+
+    .progressContainer {
+        left: 5%;
+        width: 90%;
+    }
+
+    .songInfo {
+        left: 15px;
+        bottom: 18px;
+    }
+
+    .songInfo img {
+        width: 32px;
+    }
+
+    #masterSongName {
+        font-size: 12px;
+    }
+
+    .icons {
+        gap: 20px;
+    }
+}
+

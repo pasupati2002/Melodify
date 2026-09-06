@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Spotify Clone</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4d5ca061d0.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav>
+        <ul>
+            <li class="brand">
+                <img src="logo.png" alt="Spotify Logo">
+                <span>Spotify</span>
+            </li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Music</li>
+            <li>Podcasts</li>
+            <div class="navRight">
+                <div class="searchBox">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input
+                        type="text"
+                        placeholder="What do you want to listen to?"
+                    >
+                </div>
+                <div class="library">
+                    <i class="fa-solid fa-book"></i>
+                    <span>Your Library</span>
+                </div>
+                <div class="profileIcon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <div class="songList">
+            <h1>Best of Gaurav - No Copyright Sounds</h1>
+            <div class="songItemContainer">
+                <div class="songItem">
+                    <img src="cover/1.jpg" alt="Song cover">
+                    <span class="songName">
+                        Gehra Hua
+                    </span>
+                    <span class="songListPlay">
+                        <span class="timestamp">
+                            06:05
+                            <i
+                                id="0"
+                                class="fa-solid fa-circle-play songItemPlay"
+                            ></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img src="cover/2.jpg" alt="Song cover">
+                    <span class="songName">
+                        Kanha
+                    </span>
+                    <span class="songListPlay">
+                        <span class="timestamp">
+                            04:32
+                            <i
+                                id="1"
+                                class="fa-solid fa-circle-play songItemPlay"
+                            ></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem">
+                    <img src="cover/3.jpg" alt="Song cover">
+                    <span class="songName">
+                        Jab Se
+                    </span>
+                    <span class="songListPlay">
+                        <span class="timestamp">
+                            05:24
+                            <i
+                                id="2"
+                                class="fa-solid fa-circle-play songItemPlay"
+                            ></i>
+                        </span>
+                    </span>
+                </div>
+                <div class="songItem">
+
+                    <img src="cover/4.jpg" alt="Song cover">
+
+                    <span class="songName">
+                        Vibe
+                    </span>
+
+                    <span class="songListPlay">
+
+                        <span class="timestamp">
+                            03:26
+                            <i
+                                id="3"
+                                class="fa-solid fa-circle-play songItemPlay"
+                            ></i>
+                        </span>
+
+                    </span>
+
+                </div>
+                <div class="songItem">
+                    <img src="cover/5.jpg" alt="Song cover">
+                    <span class="songName">
+                        Teri Khamoshi
+                    </span>
+                    <span class="songListPlay">
+                        <span class="timestamp">
+                            04:16
+                            <i
+                                id="4"
+                                class="fa-solid fa-circle-play songItemPlay"
+                            ></i>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="songBanner"></div>
+    </main>
+
+    <footer class="bottom">
+        <div class="progressContainer">
+            <input
+                type="range"
+                id="myProgressBar"
+                min="0"
+                max="100"
+                value="0"
+            >
+        </div>
+
+        <div class="icons">
+
+            <i
+                class="fa-solid fa-2x fa-backward-step"
+                id="previous"
+                title="Previous"
+            ></i>
+
+            <i
+                class="fa-solid fa-2x fa-circle-play"
+                id="masterPlay"
+                title="Play"
+            ></i>
+
+            <i
+                class="fa-solid fa-2x fa-forward-step"
+                id="next"
+                title="Next"
+            ></i>
+        </div>
+
+        <div class="songInfo">
+            <img
+                src="playing.gif"
+                width="42"
+                alt="Playing animation"
+                id="gif"
+            >
+            <span id="masterSongName">
+                <!-- Gehra Hua -->
+            </span>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+

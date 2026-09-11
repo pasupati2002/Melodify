@@ -1,4 +1,3 @@
-// console.log("Spotify Clone Started");
 let songIndex = 0;
 
 let audioElement = new Audio();
